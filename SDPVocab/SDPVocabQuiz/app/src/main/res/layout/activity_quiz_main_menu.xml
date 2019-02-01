@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizMainMenuActivity">
+
+<LinearLayout
+    android:id="@+id/vertLayout"
+    android:layout_width="0dp"
+    android:layout_height="587dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:id="@+id/sdpvocabLogoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sdpvocabLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sdpvocab_title_image"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/quizMainMenuBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/quizMainMenuBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:gravity="center"
+            android:text="@string/quiz_main_menu_banner"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="Main Menu" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/QuizMainMenuRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/addQuizRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:text="@string/add_a_quiz"
+            android:textColorLink="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/removeQuizRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:text="@string/remove_a_quiz_you_created"
+            android:textColorLink="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/practiseQuizRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:text="@string/practise_a_quiz_by_another_student"
+            android:textColorLink="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/viewQuizScoreStatsRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/black"
+            android:text="@string/view_list_of_quiz_score_statistics"
+            android:textColorLink="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/logoutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:text="@string/confirm_btn"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:text="@string/logout_btn"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout></android.support.constraint.ConstraintLayout>

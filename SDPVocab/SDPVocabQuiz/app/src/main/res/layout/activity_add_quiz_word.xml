@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQuizWordActivity"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/vertLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:id="@+id/sdpvocabLogoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sdpvocabLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sdpvocab_title_image"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/addQuizWordBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/addQuizWordBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:gravity="center"
+            android:text="@string/add_a_word_banner"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="Add a word" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/wordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wordLabel"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/wordName"
+            android:text="@string/word"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Word:" />
+
+        <EditText
+            android:id="@+id/wordName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="20"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/correctDefinitionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/correctDefinitionLabel"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/correctDefinition"
+            android:text="@string/correct_definition"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Correct Definition:" />
+
+        <EditText
+            android:id="@+id/correctDefinition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLength="130"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incorrectDefinitionLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/incorrectDefinition1Label"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/incorrectDefinition1"
+            android:text="@string/incorrect_definition1"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Incorrect Definition:" />
+
+        <EditText
+            android:id="@+id/incorrectDefinition1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLength="130"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incorrectDefinitionLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/incorrectDefinition2Label"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/incorrectDefinition2"
+            android:text="@string/incorrect_definition2"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Incorrect Definition:" />
+
+        <EditText
+            android:id="@+id/incorrectDefinition2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLength="130"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incorrectDefinitionLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/incorrectDefinition3Label"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/incorrectDefinition3"
+            android:text="@string/incorrect_definition3"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Incorrect Definition:" />
+
+        <EditText
+            android:id="@+id/incorrectDefinition3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLength="130"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addWordButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="155dp">
+
+        <Button
+            android:id="@+id/addWordButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:text="@string/add_word_btn"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

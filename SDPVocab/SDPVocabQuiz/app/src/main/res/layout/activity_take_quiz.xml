@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakeQuizActivity">
+
+    <LinearLayout
+        android:id="@+id/vertLayout"
+        android:layout_width="0dp"
+        android:layout_height="587dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/sdpvocabLogoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sdpvocabLogo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/sdpvocab_title_image"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/practiseQuizBannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/practiseQuizBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/border"
+                android:contentDescription=""
+                android:gravity="center"
+                android:text="@string/practise_quiz"
+                android:textColor="#000000"
+                android:textColorLink="@android:color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:text="Practise Quiz" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/wordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/wordLabel"
+                android:layout_width="275dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_white"
+                android:contentDescription=""
+                android:gravity="center"
+                android:text="@string/word"
+                android:textColor="#000000"
+                android:textColorLink="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selectCorrectDefnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/selectCorrectDefnLabel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical|center_horizontal|start"
+                android:labelFor="@+id/selectCorrectDefnRadioGroup"
+                android:text="@string/select_correct_definition"
+                android:textColor="#000000"
+                android:textColorLink="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Please select the correct definition:" />
+
+            <RadioGroup
+                android:id="@+id/selectCorrectDefnRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <RadioButton
+                    android:id="@+id/quizQuestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/black"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/quizQuestion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/black"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/quizQuestion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/black"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/quizQuestion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/black"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registerNewUserButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="top|center_horizontal"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="321dp"
+            tools:layout_editor_absoluteY="155dp">
+
+            <Button
+                android:id="@+id/nextQuizButton"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:contentDescription=""
+                android:text="@string/next_quiz"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorLink="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>

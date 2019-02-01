@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewQuizActivity">
+
+<LinearLayout
+    android:id="@+id/vertLayout"
+    android:layout_width="0dp"
+    android:layout_height="587dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:id="@+id/sdpvocabLogoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sdpvocabLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sdpvocab_title_image"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/createNewQuizBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/createNewQuizBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:gravity="center"
+            android:text="@string/create_a_quiz_banner"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="Create Quiz" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/quizNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizNameLabel"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/quizName"
+            android:text="@string/quiz_name"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Quiz Name:" />
+
+        <EditText
+            android:id="@+id/quizName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints=""
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:inputType=""
+            android:maxLength="20"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/descriptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quizDescriptionLabel"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start"
+            android:labelFor="@+id/quizDescription"
+            android:text="@string/description"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Description:" />
+
+        <EditText
+            android:id="@+id/quizDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:importantForAutofill="no"
+            android:inputType="text|textMultiLine"
+            android:maxLength="130"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numberQuizWordsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/numQuizWordsLabel"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:contentDescription=""
+            android:gravity="center|start|end"
+            android:labelFor="@+id/numberQuizWords"
+            android:text="@string/number_of_quiz_words"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Number of words:" />
+
+        <EditText
+            android:id="@+id/numberQuizWords"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:autofillHints=""
+            android:background="@drawable/border_white"
+            android:contentDescription=""
+            android:inputType="number"
+            android:maxLength="5"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createNewQuizLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="155dp">
+
+        <Button
+            android:id="@+id/createQuizButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:contentDescription=""
+            android:text="@string/create_quiz_btn"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
